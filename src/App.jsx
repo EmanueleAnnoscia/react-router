@@ -21,9 +21,10 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/AboutUs" element={<AboutUs />} />
             <Route path="/post">
+              <Route path="" element={<PostsList />} />
               <Route path=":id" element={<SinglePostDetail />} />
               <Route path="CreatePost" element={<CreatePost />} />
-              <Route path="" element={<PostsList />} />
+              
             </Route>
             <Route path="*" element={<Page404 />} /> {/* l'asterisco nelle path vuol dire che ogni cosa scriverà l'utente nel path, all'infuori di valori similari come l'id, verrà reinidirzzato nella pagina 404*/}
           </Route>

@@ -12,11 +12,11 @@ const AppHeader = () => {
         },
         {
             title: "PostsList",
-            url: "/PostsList",
+            url: "/post",
         },
         {
             title: "CreatePost",
-            url: "/CreatePost"
+            url: "/post/CreatePost"
         }
     ];
 
