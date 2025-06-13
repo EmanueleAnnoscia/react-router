@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const PostsList = () => {
   const [posts, setPosts] = useState([]);
@@ -24,7 +25,7 @@ const PostsList = () => {
                     {curPost.id} - {curPost.title}
                   </h4>
                   <p>{curPost.body}</p>
-                  <Link className="btn btn-warning" to={`/post/${id}`}>
+                  <Link className="btn btn-warning" to={'/post/' + curPost.id}>
                     Dettagli
                   </Link>
                 </div>

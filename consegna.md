@@ -16,7 +16,7 @@ repo: react-router  (stessa di ieri)
 Consegna
 Completiamo il nostro routing con l’aggiunta delle pagine di dettaglio e della creazione del post! x
 - Aggiungiamo i link alla lista dei post X
-- Facciamo quindi in modo di raggiungere la pagina di dettaglio del singolo post
+- Facciamo quindi in modo di raggiungere la pagina di dettaglio del singolo post x
 - Al submit del form reindirizziamo l'utente verso la pagina di dettaglio del post creato
 
 
