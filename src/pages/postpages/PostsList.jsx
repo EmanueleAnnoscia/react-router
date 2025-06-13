@@ -24,6 +24,9 @@ const PostsList = () => {
                     {curPost.id} - {curPost.title}
                   </h4>
                   <p>{curPost.body}</p>
+                  <Link className="btn btn-warning" to={`/post/${id}`}>
+                    Dettagli
+                  </Link>
                 </div>
               </div>
             </div>

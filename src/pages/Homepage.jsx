@@ -9,10 +9,10 @@ const Home = () => {
                 <Link className="btn btn-primary btn-lg w-100" to="/AboutUs">
                     Chi Siamo
                 </Link>
-                <Link className="btn btn-success btn-lg w-100" to="/CreatePost">
+                <Link className="btn btn-success btn-lg w-100" to="/post/CreatePost">
                     Crea un Nuovo Post
                 </Link>
-                <Link className="btn btn-danger btn-lg w-100" to="/PostsList">
+                <Link className="btn btn-danger btn-lg w-100" to="/post/PostsList">
                     Elenco dei Post
                 </Link>
             </div>

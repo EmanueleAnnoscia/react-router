@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import axios from "axios";
+import BackButton from "../../components/BackButton";
 
 function CreatePost() {
 
@@ -118,6 +119,7 @@ function CreatePost() {
                 <button type="submit" className="btn btn-primary">
                   Invia
                 </button>
+                <BackButton />
               </form>
             </div>
           </div>
