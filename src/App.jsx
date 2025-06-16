@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route element={<GuestLayout />} >
             <Route path="/" element={<HomePage />} />
-            <Route path="/AboutUs" element={<AboutUs />} />
+            <Route path="/AboutUs" element={<AboutUs />} />   {/* fare routing tramite oggetto e richiamare solamente la chaive di un oggetto impostato in un altro file*/}
             <Route path="/post">
               <Route path="" element={<PostsList />} />
               <Route path=":id" element={<SinglePostDetail />} />

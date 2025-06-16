@@ -3,6 +3,7 @@
 import { useState } from "react";
 import axios from "axios";
 import BackButton from "../../components/BackButton";
+import { useNavigate } from "react-router-dom";
 
 function CreatePost() {
 
@@ -23,6 +24,8 @@ function CreatePost() {
   const [formData, setFormData] = useState(initialFormData);
   //alert di risposta di avvenuta consegna
   const [showAlert, setShowAlert] = useState(false);
+  //use navigate
+  const navigate = useNavigate();
 
   //evento sull onchange  NON MI è CHIARO DOMANDARE BENE
   const handleChange = (event) => {
@@ -56,17 +59,19 @@ function CreatePost() {
     event.preventDefault(); //prevenzione del refresh
     //invio dati all'API 
     axios
-      .post("https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts", formData)
-      .then((resp) => {
-        if (resp.data.id) {
-          setShowAlert(true);
-          setFormData(initialFormData);
-          setTimeout(() => {
-            setShowAlert(false);
-          }, 3000);
-        }
-      });
-  };
+    .post("https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts", formData)
+    .then((resp) => {
+      if (resp.data.id) {
+        setShowAlert(true);
+        setFormData(initialFormData);
+        navigate(`/post/${resp.data.id}`);
+        // Dopo 3 secondi nasconde l'alert e reindirizza
+        setTimeout(() => {
+          setShowAlert(false);
+        }, 3000);
+      }
+    });
+};
 
   return (
     <div className="container my-3">

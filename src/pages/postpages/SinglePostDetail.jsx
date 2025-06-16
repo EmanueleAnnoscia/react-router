@@ -33,6 +33,7 @@ const SinglePostDetail = () => {
               <BackButton />
             </div>
             <h1 className="text-center">{post.title}</h1>
+            <h2 className="text-center">{post.author}</h2>
             <div className="w-50 mx-auto">
               <p>{post.body}</p>
             </div>
